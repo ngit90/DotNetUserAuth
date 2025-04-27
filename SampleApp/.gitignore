@@ -1,0 +1,55 @@
+﻿# User-specific files
+.idea/
+.vscode/
+.vs/
+
+# User-specific settings for Visual Studio for Mac and Windows
+.idea/
+.vscode/
+.vs/
+.vs2019/
+.vs2017/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer directories
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.exe
+*.dll
+*.pdb
+*.dbmdl
+
+# Windows log files
+*.log
+
+# ASP.NET Core build output
+/bin/
+/obj/
+
+/wwwroot/
+ 
+# Local database files
+appsettings.Development.json
+appsettings.Production.json
+appsettings.json
+
+# Microsoft Azure SDK
+.vscode/
+.azure-pipelines.yml
+*.azurebuild
+
+# NPM packages
+node_modules/
+
+# npm logs
+npm-debug.log*
+
+# .NET Core build directories
+project.lock.json
+project.fragment.lock.json

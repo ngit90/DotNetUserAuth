@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InternDB1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="InternDB1Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_GetUserByEmail" ReturnType="Collection(InternDB1Model.sp_GetUserByEmail_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetUsersWithGoogleId" ReturnType="Collection(InternDB1Model.sp_GetUsersWithGoogleId_Result)" />
+  </EntityContainer>
+  <ComplexType Name="sp_GetUserByEmail_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="18" />
+    <Property Type="String" Name="Email" Nullable="false" />
+    <Property Type="Int64" Name="Phone" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_GetUsersWithGoogleId_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="18" />
+    <Property Type="String" Name="Email" Nullable="false" />
+    <Property Type="Int64" Name="Phone" Nullable="false" />
+    <Property Type="String" Name="Gender" Nullable="true" />
+    <Property Type="String" Name="Password" Nullable="true" />
+    <Property Type="String" Name="Role" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="false" />
+    <Property Type="String" Name="ProfileImgPath" Nullable="false" />
+    <Property Type="String" Name="GoogleId" Nullable="true" />
+  </ComplexType>
+</Schema>

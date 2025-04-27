@@ -1,0 +1,123 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MyProjects\\Aspnet\\SampleApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|c:\\myprojects\\aspnet\\sampleapp\\sampleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|solutionrelative:sampleapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|c:\\myprojects\\aspnet\\sampleapp\\sampleapp\\views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|solutionrelative:sampleapp\\views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|c:\\myprojects\\aspnet\\sampleapp\\sampleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|solutionrelative:sampleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|c:\\myprojects\\aspnet\\sampleapp\\sampleapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|solutionrelative:sampleapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|c:\\myprojects\\aspnet\\sampleapp\\sampleapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D674FAF-6B9B-46C4-9FE9-3E3F2A11E05A}|SampleApp\\SampleApp.csproj|solutionrelative:sampleapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": []
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "b7f3a9f1-776e-4a6a-ae3e-ee26d6202670",
+        "Display": 0,
+        "X": 13,
+        "Y": 91,
+        "Width": 194,
+        "Height": 431,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\appsettings.json",
+              "RelativeDocumentMoniker": "SampleApp\\appsettings.json",
+              "ToolTip": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\appsettings.json",
+              "RelativeToolTip": "SampleApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-27T15:38:15.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.Config",
+              "DocumentMoniker": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\App.Config",
+              "RelativeDocumentMoniker": "SampleApp\\App.Config",
+              "ToolTip": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\App.Config",
+              "RelativeToolTip": "SampleApp\\App.Config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-27T15:37:44.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Signup.cshtml",
+              "DocumentMoniker": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\Views\\Account\\Signup.cshtml",
+              "RelativeDocumentMoniker": "SampleApp\\Views\\Account\\Signup.cshtml",
+              "ToolTip": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\Views\\Account\\Signup.cshtml",
+              "RelativeToolTip": "SampleApp\\Views\\Account\\Signup.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T15:35:53.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\Program.cs",
+              "RelativeDocumentMoniker": "SampleApp\\Program.cs",
+              "ToolTip": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\Program.cs",
+              "RelativeToolTip": "SampleApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:34:52.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "SampleApp\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\MyProjects\\Aspnet\\SampleApp\\SampleApp\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "SampleApp\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:34:45.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+﻿@model SampleApp.Models.Registration
+@{
+    ViewData["Title"] = "Edit Registration";
+    Layout = "_MinimalLayout";
+}
+<head>
+    <style>
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<h2>Edit Registration</h2>
+
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" readonly />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" readonly />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+   
+    <div class="form-group">
+        <label asp-for="Status"></label>
+        <select asp-for="Status" class="form-control">
+            <option value="Active">Active</option>
+            <option value="Block">Block</option>
+        </select>
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+   <br />
+    <!-- Hidden field to ensure the ID is passed back -->
+    <input type="hidden" asp-for="Id" value="@Model.Id"/>
+    <input type="hidden" asp-for="Password" />
+    <input type="hidden" asp-for="Phone" />
+    <input type="hidden" asp-for="Gender" />
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="list" class="btn btn-secondary">Cancel</a>
+</form>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

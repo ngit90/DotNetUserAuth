@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Link Expired or Invalid";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow rounded-4 text-center">
+                <div class="card-body p-5">
+                    <h2 class="text-danger mb-3">⚠️ Oops!</h2>
+                    <p class="lead mb-2">
+                        This password reset link is either invalid, expired, or has already been used.
+                    </p>
+                    <p>Please request a new one if you still need to reset your password.</p>
+                    <a href="@Url.Action("ForgotPassword", "Account")" class="btn btn-outline-primary mt-3">
+                        Request New Link
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

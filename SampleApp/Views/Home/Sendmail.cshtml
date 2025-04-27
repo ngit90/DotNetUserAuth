@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "_MinimalLayout";
+}
+
+<ul style="list-style:none;">
+    <li>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"> << Back to Dashboard</a>
+    </li>
+</ul>
+
+
+@if (ViewBag.Message != null)
+{
+    <p class="alert alert-success">@ViewBag.Message</p>
+}
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4 w-50">
+        <h2 class="text-center mb-4">Send Email</h2>
+
+        <form asp-action="SendMail" asp-controller="Home" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label for="recipientEmail" class="form-label">Recipient Email:</label>
+                <input type="email" id="recipientEmail" name="recipientEmail" class="form-control" placeholder="Enter recipient's email" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject:</label>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter subject" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Message:</label>
+                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary w-100">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

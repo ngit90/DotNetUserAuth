@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "_MinimalLayout";
+}
+<a href="@Url.Action("List")" class="btn btn-secondary">Back to List</a>
+<div class="container my-4">
+    <div class="card shadow p-4">
+        <div style="position: relative; height: 400px; width: 100%;">
+            <canvas id="userChart"></canvas>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    fetch('/admin/GetUserChartData')
+        .then(res => res.json())
+        .then(data => {
+            const labels = data.map(x => x.Status);
+            const counts = data.map(x => x.Count);
+
+            new Chart(document.getElementById('userChart'), {
+                type: 'bar', // or 'pie'
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Users by Status',
+                        data: counts,
+                        backgroundColor: ['#4caf50', '#f44336'] // Active = green, Blocked = red
+                    }]
+                }
+            });
+        });
+</script>

@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_MinimalLayout";
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Logout" asp-controller="Account" method="post">
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Admin Dashboard</h1>
+
+    <a asp-action="list" asp-controller="Admin"> Users List </a>
+
+</div>

@@ -1,0 +1,116 @@
+﻿@model Registration
+@using AspNetCore.ReCaptcha
+@inject Microsoft.Extensions.Options.IOptions<ReCaptchaSettings> ReCaptchaConfig
+@{
+    ViewData["Title"] = "Signup";
+}
+<head>
+    <style>
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card shadow p-4 w-50">
+        <h2 class="text-center mb-4">Signup</h2>
+
+        <form asp-action="Signup" method="post" enctype="multipart/form-data" id="signup">
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" asp-for="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone No.</label>
+                <input type="number" class="form-control" id="phone" asp-for="Phone" required>
+                <span asp-validation-for="Phone" class="text-danger"></span>
+               
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <div class="d-flex gap-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" id="male" value="Male" asp-for="Gender" required>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" id="female" value="Female" asp-for="Gender">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" asp-for="Password" required>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ProfileImg" class="form-label">Profile Image</label>
+                <input asp-for="ProfileImg" class="form-control" type="file" accept=".png,.jpg,.jpeg" onchange="previewImage(this)">
+                <span asp-validation-for="ProfileImg" class="text-danger"></span>
+
+                <div class="mt-3 d-flex flex-column align-items-center">
+                    <label for="posterPreview" class="form-label">Preview</label>
+                    <img id="posterPreview" src="#" alt="Profile Preview" class="rounded-circle shadow"
+                         style="display:none; max-width: 150px; height: 150px; object-fit: cover;" />
+                </div>
+            </div>
+
+            <div class="mb-3 text-center">
+                <div class="d-flex justify-content-center">
+                <div class="g-recaptcha d-inline-block" data-sitekey=""></div>
+             
+                </div>
+                <span class="text-danger d-block mt-2">@Html.ValidationMessage("CaptchaError")</span>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <div class="text-center mt-3">
+                <a asp-controller="Account" asp-action="Index" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+<script type="text/javascript">
+    function previewImage(input) {
+        if (input.files && input.files[0]) {
+            var file = input.files[0];
+            // Validate file extension
+            var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+            if (!allowedExtensions.exec(file.name)) {
+                alert('Only .png, .jpg, .jpeg files are allowed.');
+                input.value = '';
+                return false;
+            }
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var img = document.getElementById('posterPreview');
+                img.src = e.target.result;
+                img.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

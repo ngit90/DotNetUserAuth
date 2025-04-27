@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InternDB1ModelStoreContainer" CdmEntityContainer="InternDB1Entities">
+    <FunctionImportMapping FunctionImportName="sp_GetUserByEmail" FunctionName="InternDB1Model.Store.sp_GetUserByEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InternDB1Model.sp_GetUserByEmail_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetUsersWithGoogleId" FunctionName="InternDB1Model.Store.sp_GetUsersWithGoogleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InternDB1Model.sp_GetUsersWithGoogleId_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProfileImgPath" ColumnName="ProfileImgPath" />
+          <ScalarProperty Name="GoogleId" ColumnName="GoogleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

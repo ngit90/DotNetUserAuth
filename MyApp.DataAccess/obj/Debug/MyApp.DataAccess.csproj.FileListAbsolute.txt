@@ -1,0 +1,12 @@
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\bin\Debug\MyApp.DataAccess.dll.config
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\bin\Debug\MyApp.DataAccess.dll
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\bin\Debug\MyApp.DataAccess.pdb
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\obj\Debug\MyApp.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\obj\Debug\MyApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\obj\Debug\MyApp.Da.7489AA4C.Up2Date
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\obj\Debug\MyApp.DataAccess.dll
+C:\Users\Noopura\source\repos\SampleApp\MyApp.DataAccess\obj\Debug\MyApp.DataAccess.pdb

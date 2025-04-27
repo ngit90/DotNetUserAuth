@@ -1,0 +1,33 @@
+﻿@model Registration
+@{
+    Layout = "_MinimalLayout";
+    ViewData["Title"] = "Home Page";
+}
+<div class="mt-3 d-flex justify-content-end align-items-end gap-2">
+    <a asp-action="EditProfile" class="btn btn-outline-secondary">Edit Profile</a>
+    <a asp-action="ChangePassword" class="btn btn-outline-danger ms-2" asp-route-id="@Model.Id">Change Password</a>
+    <form asp-action="Logout" asp-controller="Account" method="post">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+</div>
+
+<div class="container mt-5">
+   
+    <div class="text-center">
+        <h1 class="display-4">Welcome to User Dashboard</h1>
+
+        <a asp-action="Sendmail" class="btn btn-primary mt-3">Send an Email</a>
+
+        <div class="mt-4 d-flex flex-column align-items-center">
+            <label for="profileimg" class="fw-bold">Profile Image</label>
+
+            <div class="border rounded-circle overflow-hidden" style="width: 120px; height: 120px;">
+                <img id="profileimg" src="~/Uploads/@Model.ProfileImgPath"
+                     alt="Profile Image"
+                     class="img-fluid w-100 h-100"
+                     style="object-fit: cover;" />
+            </div>
+        </div>
+    </div>
+</div>
+

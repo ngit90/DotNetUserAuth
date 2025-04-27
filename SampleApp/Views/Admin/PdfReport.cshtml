@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SampleApp.Models.Registration>
+
+@{
+    Layout = null; // No layout for clean PDF output
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h3 {
+            color: darkblue;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+   
+    <h3>UsersList Report</h3>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <th>Email:</th>
+            <th>Gender:</th>
+            <th>Status:</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Gender</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

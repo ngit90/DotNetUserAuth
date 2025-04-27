@@ -1,0 +1,95 @@
+﻿@using SampleApp.Services
+
+@*   @model IEnumerable<SampleApp.Models.Registration>; *@
+      @model PaginatedList<SampleApp.Models.Registration>
+
+@{
+    Layout = "_MinimalLayout";
+}
+
+<h3>Registered Users:</h3>
+
+<div class="mb-3">
+    <a asp-action="GeneratePDF" class="btn btn-danger">Generate PDF</a>
+    <a asp-action="ExportToExcel" class="btn btn-success">Export to Excel</a>
+    <a asp-action="StatusChart" class="btn btn-danger">Status Chart</a>
+</div>
+<form method="get" asp-action="List" class="mb-3">
+    <div class="row g-3 align-items-center">
+        <div class="col-md-4">
+            <input type="text" name="searchName" class="form-control" placeholder="Search by Name" value="@Context.Request.Query["searchName"]">
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="searchEmail" class="form-control" placeholder="Search by Email" value="@Context.Request.Query["searchEmail"]">
+        </div>
+        <div class="col-md-4 d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a href="@Url.Action("List")" class="btn btn-secondary">Reset</a>
+        </div>
+    </div>
+</form>
+<table border="1" class="table table-striped">
+    <tr>
+        <th>Name </th>
+        <th>Email</th>
+        <th>View</th>
+        <th>Edit </th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        var encryptedId = RSAEncryption.Encrypt(user.Id.ToString());
+        <tr>
+            <td>@user.Name</td>
+            <td>@user.Email</td>
+            <td> <a asp-action="ViewUser" asp-route-id="@encryptedId">View</a></td>
+            <td> <a asp-action="Edit" asp-route-id="@encryptedId">Edit</a></td>
+            <td><a asp-action="Delete" asp-route-id="@encryptedId">Delete</a></td>
+        </tr>
+    }
+</table>
+
+<!-- Pagination Controls -->
+<div>
+    <ul class="pagination">
+        @if (Model.HasPreviousPage)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="List" asp-route-searchName="@Context.Request.Query["searchName"]"
+                   asp-route-searchEmail="@Context.Request.Query["searchEmail"]"  asp-route-page="@(Model.PageNumber - 1)">Previous</a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled"><span class="page-link">Previous</span></li>
+        }
+
+        @for (var i = 1; i <= Model.TotalPages; i++)
+        {
+            if (i == Model.PageNumber)
+            {
+                <li class="page-item active"><span class="page-link">@i</span></li>
+            }
+            else
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-action="List" asp-route-searchName="@Context.Request.Query["searchName"]"
+                       asp-route-searchEmail="@Context.Request.Query["searchEmail"]" asp-route-page="@i">@i</a>
+                </li>
+            }
+        }
+
+        @if (Model.HasNextPage)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="List" asp-route-searchName="@Context.Request.Query["searchName"]"
+                   asp-route-searchEmail="@Context.Request.Query["searchEmail"]" asp-route-page="@(Model.PageNumber + 1)">Next</a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled"><span class="page-link">Next</span></li>
+        }
+    </ul>
+</div>
+<a asp-action="Index">Go Back</a>
